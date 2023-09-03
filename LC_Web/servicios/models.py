@@ -17,4 +17,4 @@ class Service(models.Model):
     example_photos = models.ImageField(upload_to='photos/examples/', validators=[validate_file_extension_photo])
 
     def __str__(self):
-        return self.name
+        return self.title

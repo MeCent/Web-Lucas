@@ -5,34 +5,38 @@
 
 {% block content %}
 
-<div class="row my-4">
-    <div class="text-center">
+<div class="container">
+    <div class="text-center pt-4 pb-4">
         <h2>MIS SERVICIOS</h2>
     </div>
-    <div class="row justify-content-evenly">
-        {% for service in service %}
-        <div class="container" >
-            <div class="card p-4 m-3">
-                <div class="row g-0">
-                    <div class="col-md-8">
-                        <div class="card-header text-center">
-                            <h3 class="card-title">{{ service.title }}</h3>
-                            <h5 class="card-subtitle">{{ service.subtitle }}</h5>
-                        </div>
-                        <div class="card-body text-center">
-                            <p class="card-text">{{ service.description | safe }}</p>
-                        </div>
-                        <div class="card-footer align-self-start">
-                            <p class="card-text align-self-start">{{ service.benefits | safe}}</p>
-                        </div>
+    {% for service in service %}
+    <div class="container" >
+        <div class="card p-4 mb-4">
+            <div class="row g-0">
+                <div class="col-md-8">
+                    <div class="card-header text-center">
+                        <h3 class="card-title">{{ service.title }}</h3>
+                        <h5 class="card-subtitle">{{ service.subtitle }}</h5>
                     </div>
-                    <div class="col-md-4 ">
-                        <img src="{{ service.example_photos.url }}" class="img-fluid" alt="...">
+                    <div class="card-body text-center">
+                        <p class="card-text">{{ service.description | safe }}</p>
                     </div>
+                    <div class="card-footer align-self-start">
+                        <p class="card-text align-self-start">{{ service.benefits | safe}}</p>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <img src="{{ service.example_photos.url }}" class="img-fluid" alt="...">
                 </div>
             </div>
         </div>
+    </div>
+    {% endfor %}
+</div>
 
+{% endblock %}
+
+</html>
 
         <!--
         <div class="col-md-4 p-4 ">
@@ -97,10 +101,3 @@
                 </div>
             </div>
         </div> -->
-        {% endfor %}
-    </div>
-</div>
-
-{% endblock %}
-
-</html>

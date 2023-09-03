@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} ESTUDIOS {% endblock %}
+
+{% block content %}
+
+<div class="container" >
+    <div class="card p-4 m-3">
+        <div class="row g-0">
+            <div class="col-md-8">
+                <div class="card-header">
+                    <h3 class="card-title">Card title</h3>
+                    <h5 class="card-subtitle">Card title</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                </div>
+                <div class="card-footer">
+                    BENEFICIOS
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <img src="{% static 'assets/images/Pausas_Activas_01.png' %}" class="img-fluid" alt="...">
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+</html>

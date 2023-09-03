@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} SERVICIOS {% endblock %}
+
+{% block content %}
+
+<div class="row my-4">
+    <div class="text-center">
+        <h2>MIS SERVICIOS</h2>
+    </div>
+    <div class="row justify-content-evenly">
+        {% for service in service %}
+        <div class="container" >
+            <div class="card p-4 m-3">
+                <div class="row g-0">
+                    <div class="col-md-8">
+                        <div class="card-header text-center">
+                            <h3 class="card-title">{{ service.title }}</h3>
+                            <h5 class="card-subtitle">{{ service.subtitle }}</h5>
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="card-text">{{ service.description | safe }}</p>
+                        </div>
+                        <div class="card-footer align-self-start">
+                            <p class="card-text align-self-start">{{ service.benefits | safe}}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <img src="{{ service.example_photos.url }}" class="img-fluid" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--
+        <div class="col-md-4 p-4 ">
+            <div class="card h-100 card-project">
+                <div class="card-header">
+                    <h3 class="card-title">{{ service.title }}</h3>
+                    <h3 class="card-subtitle mb-2 text-body-secondary">{{ service.subtitle }}</h3>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{ service.description | safe }}</p>
+                </div>
+                <div class="card-body">
+                    {{ service.benefits | safe}}
+                </div>
+                <div class="card-footer">
+                    <div class="accordion p-2" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne">
+                                    BENEFICIOS
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                                <div class="accordion-body text-black">
+                                        {{ service.benefits | safe}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseTwo">
+                                    RESULTADOS
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <img src="{{ service.example_photos.url }}" class="img-fluid" alt="{{ service.title }}" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseThree">
+                                    ACCEDE A ESTE SERVICIO
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    BOTONES DE MEDIOS DE PAGO
+                                    MERCADOPAGO
+                                    PAYPAL
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
+
+</html>

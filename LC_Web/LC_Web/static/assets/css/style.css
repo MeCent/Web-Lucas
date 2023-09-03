@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* GENERAL */
+
+body {
+    background-color: rgb(78, 78, 78);
+    font-family: 'Barlow', sans-serif;
+}
+
+h1, h2 {
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+}
+
+p, h3, h4 {
+    color: rgb(0, 0, 0);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+}
+
+/* BANNER */
+
+#presentacion_nombre {
+    font-size: large;
+}
+
+/* CARDS */
+
+.card {
+    background-color: rgb(156, 78, 78);
+    transition: all 0.3s;
+}
+
+.card-project:hover {
+    border: 1px solid #000;
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.accordion-button {
+    background-color: rgb(78, 78, 78);
+
+
+}
+

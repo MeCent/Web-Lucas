@@ -12,12 +12,12 @@
     {% for service in service %}
     <div class="container" >
         <div class="card p-4 mb-4">
+            <div class="card-header text-center">
+                <h3 class="card-title">{{ service.title }}</h3>
+                <h5 class="card-subtitle">{{ service.subtitle }}</h5>
+            </div>
             <div class="row g-0">
                 <div class="col-md-8">
-                    <div class="card-header text-center">
-                        <h3 class="card-title">{{ service.title }}</h3>
-                        <h5 class="card-subtitle">{{ service.subtitle }}</h5>
-                    </div>
                     <div class="card-body text-center">
                         <p class="card-text">{{ service.description | safe }}</p>
                     </div>
@@ -25,7 +25,7 @@
                         <p class="card-text align-self-start">{{ service.benefits | safe}}</p>
                     </div>
                 </div>
-                <div class="col-md-4 ">
+                <div class="col-md-4 d-flex align-items-center">
                     <img src="{{ service.example_photos.url }}" class="img-fluid" alt="...">
                 </div>
             </div>

@@ -5,11 +5,6 @@ from .models import Owner
 def home(request):
     return render(request, 'pages/index.html')
 
-
-
-def estudios(request):
-    return render(request, 'pages/estudios.html')
-
 def experiencia(request):
     return render(request, 'pages/experiencia.html')
 

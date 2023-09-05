@@ -7,13 +7,13 @@ body {
     font-family: 'Barlow', sans-serif;
 }
 
-h1, h2 {
+h1, h2, p {
     color: white;
     font-family: 'Barlow', sans-serif;
     font-weight: 1200;
 }
 
-p, h3, h4 {
+h3, h4 {
     color: rgb(0, 0, 0);
     font-family: 'Barlow', sans-serif;
     font-weight: 400;
@@ -43,7 +43,7 @@ p, h3, h4 {
 }
 
 .accordion-button {
-    background-color: rgb(78, 78, 78);
+    background-color: rgb(156, 78, 78);
 
 
 }

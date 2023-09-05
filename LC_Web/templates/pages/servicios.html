@@ -10,22 +10,49 @@
         <h2>MIS SERVICIOS</h2>
     </div>
     {% for service in service %}
-    <div class="container" >
+    <div class="container">
         <div class="card p-4 mb-4">
             <div class="card-header text-center">
                 <h3 class="card-title">{{ service.title }}</h3>
                 <h5 class="card-subtitle">{{ service.subtitle }}</h5>
             </div>
             <div class="row g-0">
-                <div class="col-md-8">
+                <div class="col-md-6">
                     <div class="card-body text-center">
                         <p class="card-text">{{ service.description | safe }}</p>
                     </div>
-                    <div class="card-footer align-self-start">
-                        <p class="card-text align-self-start">{{ service.benefits | safe}}</p>
+                    <div class="card-footer">
+                        <div class="d-flex flex-row p-4">
+                            <div class="ps-4">
+                                <p class="d-inline-flex gap-1">
+                                    <button class="btn btn-primary collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                        BENEFICIOS
+                                    </button>
+                                </p>
+                                <div class="collapse" id="collapseExample" style="">
+                                    <div class="card card-body">
+                                        <p class="card-text">{{ service.benefits | safe}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="d-inline-flex gap-1">
+                                    <button class="btn btn-primary collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                        ACCEDE
+                                    </button>
+                                </p>
+                                <div class="collapse" id="collapseExample" style="">
+                                    <div class="card card-body">
+                                        <p class="card-text">MERCADOPAGO</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 d-flex align-items-center">
+                <div class="col-md-6 p-4 d-flex align-items-center">
                     <img src="{{ service.example_photos.url }}" class="img-fluid" alt="...">
                 </div>
             </div>
@@ -38,7 +65,7 @@
 
 </html>
 
-        <!--
+<!--
         <div class="col-md-4 p-4 ">
             <div class="card h-100 card-project">
                 <div class="card-header">

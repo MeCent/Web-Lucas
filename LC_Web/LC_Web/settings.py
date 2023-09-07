@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'ckeditor',
     'servicios.apps.ServiciosConfig',
+    'experience.apps.ExperienceConfig',
 ]
 
 MIDDLEWARE = [

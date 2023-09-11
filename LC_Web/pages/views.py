@@ -5,8 +5,5 @@ from .models import Owner
 def home(request):
     return render(request, 'pages/index.html')
 
-def experiencia(request):
-    return render(request, 'pages/experiencia.html')
-
 def contacto(request):
     return render(request, 'pages/contacto.html')

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'servicios.apps.ServiciosConfig',
     'experience.apps.ExperienceConfig',
+    'routines.apps.RoutinesConfig',
 ]
 
 MIDDLEWARE = [

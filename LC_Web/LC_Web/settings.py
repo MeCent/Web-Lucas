@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'servicios.apps.ServiciosConfig',
     'experience.apps.ExperienceConfig',
     'routine.apps.RoutineConfig',
+    'users.apps.UsersConfig',
+    'crispy_forms',
+    'crispy_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -126,6 +129,10 @@ import os
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'LC_Web/static')]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # MEDIA CONFIGURATION
 

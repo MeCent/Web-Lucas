@@ -7,7 +7,7 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container text-white">
     <div class="content-section">
         <form method="POST">
             {% csrf_token %}
@@ -21,7 +21,7 @@
         </form>
         <div class="border-top pt-3">
             <small class="text-muted">
-                ¿Ya tenes una cuenta? <a class="ml-2" href="#">Iniciá Sesión</a>
+                ¿Ya tenes una cuenta? <a class="ml-2" href="{% url 'login' %}">Iniciá Sesión</a>
             </small>
         </div>
     </div>

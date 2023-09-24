@@ -30,12 +30,27 @@
                             <span class="ms-2">Contacto</span>
                         </a>
                     </li>
+                    {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="http://127.0.0.1:8000/admin/">
+                        <a class="nav-link" aria-current="page" href="{% url 'profile' %}">
+                            <i class="fa-solid fa-user"></i>
+                            <span class="ms-2">Perfil</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'logout' %}">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <span class="ms-2">Logout</span>
+                        </a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'login' %}">
                             <i class="fa-solid fa-right-to-bracket"></i>
                             <span class="ms-2">Log In</span>
                         </a>
                     </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>

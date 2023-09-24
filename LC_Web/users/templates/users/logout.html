@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} LOGOUT {% endblock %}
+
+{% block content %}
+
+<div class="container text-white">
+    <h2>Te deslogeaste correctamente.</h2>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            <a href="{% url 'login' %}">Volvé a iniciar Sesión</a>
+        </small>
+    </div>
+</div>
+
+{% endblock %}

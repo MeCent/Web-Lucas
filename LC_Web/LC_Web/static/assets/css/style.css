@@ -19,6 +19,10 @@ h3, h4 {
     font-weight: 400;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* BANNER */
 
 #presentacion_nombre {
@@ -30,6 +34,9 @@ h3, h4 {
 .card {
     background-color: rgb(78, 78, 78);
     transition: all 0.3s;
+    text-decoration: none;
+    align-content: center;
+    justify-content: center;
 }
 
 .card-header {
@@ -37,7 +44,7 @@ h3, h4 {
 }
 
 .card-project:hover {
-    border: 1px solid #000;
+    background-color: rgb(156, 78, 78);
     cursor: pointer;
     transform: scale(1.02);
 }

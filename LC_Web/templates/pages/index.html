@@ -24,15 +24,21 @@
 
     {% block content %}
 
-    <div class="container-fluid p-4 bg-black">
+    <div class="container-fluid p-4">
         <div class="row">
+            <!-- FOTO DE PERFIL -->
+            <div class="col-md-4">
+                <img src="{{owner.main_photo.url}}" class="img-fluid" alt="Foto de Perfil">
+            </div>
             <div class="col-md-8 my-auto">
-                <div class="row">
+                <!-- DESCRIPCION -->
+                <div class="row ps-4">
                     <h1>{{owner.name}}</h1>
                     <h1>{{owner.freelance}}</h1>
                     <h4 class="text-white">{{owner.city}}</h4>
                     <h2 class="text-white">{{owner.descript | safe}}</h2>
                 </div>
+                <!-- REDES -->
                 <div class="row pt-4">
                     <div class="my-auto d-flex justify-content-evenly">
                         <a href="{{owner.instagram_link}}" target="_blank">
@@ -47,49 +53,36 @@
                         <a class="btn btn-outline-light btn-sm" href="{{owner.cv.url}}" target="_blank">DOWNLOAD CV</a>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <img src="{{owner.main_photo.url}}" class="img-fluid" alt="Foto de Perfil">
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row p-3">
-            <div class="col-sm-4 mb-3 mb-sm-0">
-                <div class="card">
-                    <div class="card text-center">
-                        <h5 class="card-header">MIS SERVICIOS</h5>
-                        <div class="card-body">
-                            <p class="card-text">CONOCE LOS SERVICIOS ONLINE QUE BRINDO.</p>
-                            <a href="servicios/" class="btn btn-primary">ACCEDE</a>
+                <!-- SERVICIOS -->
+                <div class="container-fluid">
+                    <div class="row p-4">
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <div class="card h-100 p-4 text-center btn btn-outline-light btn-sm ">
+                                <a href="servicios/">
+                                    <h5>CONOCE LOS SERVICIOS ONLINE QUE BRINDO.</h5>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 mb-3 mb-sm-0">
-                <div class="card">
-                    <div class="card text-center">
-                        <h5 class="card-header">MI EXPERIENCIA</h5>
-                        <div class="card-body">
-                            <p class="card-text">CONOCE MIS ESTUDIOS Y TRABAJOS.</p>
-                            <a href="experience/" class="btn btn-primary">ACCEDE</a>
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <div class="card h-100 p-4 text-center btn btn-outline-light btn-sm ">
+                                <a href="experience/">
+                                    <h5>CONOCE MIS ESTUDIOS Y TRABAJOS.</h5>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 mb-3 mb-sm-0">
-                <div class="card">
-                    <div class="card text-center">
-                        <h5 class="card-header">CONTACTAME</h5>
-                        <div class="card-body">
-                            <p class="card-text">CONOCE MIS REDES Y ESCRIBIME.</p>
-                            <a href="contacto/" class="btn btn-primary">ACCEDE</a>
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <div class="card h-100 p-4 text-center btn btn-outline-light btn-sm ">
+                                <a href="contacto/">
+                                    <h5>CONOCE MIS REDES Y CONTACTAME.</h5>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
 
 

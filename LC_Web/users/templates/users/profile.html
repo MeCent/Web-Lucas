@@ -7,8 +7,8 @@
 
 {% block content %}
 
-<div class="container text-white">
-    <div class="content-section">
+<div class="container">
+    <div class="content-section d-inline-flex">
         <div class="media">
             <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" alt="Imagen de Perfil"
                 width="150px">
@@ -23,34 +23,55 @@
                 </div>
                 <p class="text-secondary">{{ user.email }}</p>
             </div>
-        </div>
-    </div>
-    <div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5 text-black" id="staticBackdropLabel">Informacion Personal</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body text-black">
-                        <form method="POST" enctype="multipart/form-data">
-                            {% csrf_token %}
-                            <fieldset class="form-group">
-                                {{ u_form|crispy }}
-                                {{ p_form|crispy }}
-                            </fieldset>
-                            <div class="form-group modal-footer">
-                                <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cerrar</button>
-                                <button class="btn btn-primary" type="submit">Actualizar</button>
-                            </div>
-                        </form>
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 text-black" id="staticBackdropLabel">Informacion Personal</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-black">
+                            <form method="POST" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <fieldset class="form-group">
+                                    {{ u_form|crispy }}
+                                    {{ p_form|crispy }}
+                                </fieldset>
+                                <div class="form-group modal-footer">
+                                    <button class="btn btn-secondary" type="button"
+                                        data-bs-dismiss="modal">Cerrar</button>
+                                    <button class="btn btn-primary" type="submit">Actualizar</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- INTRO RUTINA -->
+        <div class="media ps-4">
+            <div class="media-body d-flex flex-column">
+                <div>
+                    <h4 class="account-heading pe-2 text-white">Desde: {{ routine.star_date }}</h4>
+                    <h4 class="account-heading pe-2 text-white">Hasta: {{ routine.end_date }}</h4>
+                </div>
+                <div>
+                    <h4 class="account-heading pe-2 text-white">Objetivos:</h4>
+                    <p class="text-secondary">{{ routine.objetivo }}</p>
+                </div>
+                <div>
+                    <h4 class="account-heading pe-2 text-white">Observaciones:</h4>
+                    <p class="text-secondary">{{ routine.observaciones }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- RUTINA -->
+    <div>
+        {% include 'pages/routine.html' %}
+    </div>
+<div>
 
 {% endblock %}

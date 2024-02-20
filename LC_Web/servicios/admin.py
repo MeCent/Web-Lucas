@@ -2,10 +2,10 @@ from django.contrib import admin
 from .models import Service, Carousel
 
 class ServiceAdmin(admin.ModelAdmin):
-    list_display = ('title', 'subtitle', 'description', 'benefits', 'image')
+    list_display = ('title', 'subtitle', 'description', 'benefits')
 
 class CarouselAdmin(admin.ModelAdmin):
-    list_display = ('image', 'title', 'subtitle')
+    list_display = ('image', 'imgtitle', 'imgsubtitle')
 
 admin.site.register(Service, ServiceAdmin)
 

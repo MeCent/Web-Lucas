@@ -14,16 +14,14 @@ class Service(models.Model):
     subtitle = models.CharField(max_length=150)
     description = models.TextField()
     benefits = RichTextField(blank=True)
-    image = models.ImageField(upload_to='photos/examples/', validators=[validate_file_extension_photo])
-
 
     def __str__(self):
         return self.title
 
 class Carousel(models.Model):
     image = models.ImageField(upload_to='photos/examples/', validators=[validate_file_extension_photo])
-    title = models.CharField(max_length=150)
-    subtitle = models.CharField(max_length=250)
+    imgtitle = models.CharField(max_length=150)
+    imgsubtitle = models.CharField(max_length=250)
 
     def __str__(self):
-        return self.title
+        return self.imgtitle
